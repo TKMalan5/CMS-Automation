@@ -17,7 +17,7 @@ public class b_BusinessUser extends qaBase {
     @Test (priority = 1)
     public void BusinessUserTest() {
 
-        testCaseId  = "5";
+        testCaseId  = "25";
 
         driver.findElement(By.id("login_username")).sendKeys(usernameBusinessUser);
         driver.findElement(By.id("login_password")).sendKeys(password);
@@ -32,7 +32,7 @@ public class b_BusinessUser extends qaBase {
     @Test(priority = 2)
     public void confirmBUProfile() {
 
-        testCaseId = "10";
+        testCaseId = "26";
 
         WebElement dropdownMenu = driver.findElement(By.xpath("(//a[@data-toggle='dropdown'])[1]"));
         dropdownMenu.click();

@@ -17,9 +17,8 @@ public class a_SuperUser extends qaBase {
     @Test(priority = 1)
     public void  superUserTest() {
 
-        System.out.println("Test1");
+        testCaseId  = "23";
 
-        testCaseId  = "6";
         System.out.println("id");
         driver.findElement(By.id("login_username")).sendKeys(usernameSuperUser);
         System.out.println("test2");
@@ -32,7 +31,8 @@ public class a_SuperUser extends qaBase {
 
     @Test(priority = 2)
     public void confirmSUProfile() {
-        testCaseId = "9";
+
+        testCaseId = "24";
 
         WebElement dropdownMenu = driver.findElement(By.xpath("(//a[@data-toggle='dropdown'])[1]"));
         dropdownMenu.click();

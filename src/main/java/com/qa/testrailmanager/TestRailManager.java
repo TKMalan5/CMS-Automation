@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class TestRailManager {
 
-    public static String TEST_RUN_ID = "4";
+    public static String TEST_RUN_ID = "5";
     public static String TEST_RAIL_USERNAME = "taniamalan81@gmail.com";
     public static String TEST_RAIL_PASSWORD = "H#!3d!UP4DcicsJ";
 

@@ -17,7 +17,7 @@ public class c_Trustee extends qaBase {
     @Test (priority = 1)
     public void trusteeUser() {
 
-        testCaseId  = "7";
+        testCaseId  = "27";
         driver.findElement(By.id("login_username")).sendKeys(usernameTrustee);
         driver.findElement(By.id("login_password")).sendKeys(password);
         driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
@@ -32,7 +32,7 @@ public class c_Trustee extends qaBase {
     @Test (priority = 2)
     public void confirmTUprofile () throws InterruptedException {
 
-        testCaseId = "21";
+        testCaseId = "28";
 
         Thread.sleep(4000);
         WebElement dropdownMenu = driver.findElement(By.xpath("(//a[@data-toggle='dropdown'])[1]"));
