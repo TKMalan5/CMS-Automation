@@ -2,34 +2,29 @@ package com.qa.testrailmanager;
 
 import com.gurock.testrail.APIClient;
 import com.gurock.testrail.APIException;
-import org.openqa.selenium.remote.Browser;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class TestRailManager {
 
-    public static String TEST_RUN_ID = "5";
+    public static String TEST_RUN_ID = "7";
     public static String TEST_RAIL_USERNAME = "taniamalan81@gmail.com";
     public static String TEST_RAIL_PASSWORD = "H#!3d!UP4DcicsJ";
-
     public static String TEST_RAIL_ENGINE_URL = "https://taniamalan.testrail.io/";
 
     public static int TEST_CASE_PASS_STATUS = 1;
     public static int TEST_CASE_FAIL_STATUS = 5;
 
-    public static void addResultsForTestCase(String testCaseId, int status, String error) {
-
+    public static void addResultsForTestCase(String testCaseId, int status, String message) {
         String testRunID = TEST_RUN_ID;
         APIClient client = new APIClient(TEST_RAIL_ENGINE_URL);
         client.setUser(TEST_RAIL_USERNAME);
         client.setPassword(TEST_RAIL_PASSWORD);
 
-        Map<String, Object> data = new HashMap<String, Object>();
+        Map<String, Object> data = new HashMap<>();
         data.put("status_id", status);
-        data.put("comment", "This test is executed via selenium automation" + error);
-
+        data.put("comment", message); // Include detailed failure message
 
         try {
             // Log the request details
@@ -49,7 +44,3 @@ public class TestRailManager {
         }
     }
 }
-
-
-
-
